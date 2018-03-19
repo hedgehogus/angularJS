@@ -1,0 +1,7 @@
+.active{
+    background-color: rgb(158, 124, 124);
+}
+
+li {
+    display: inline-block;
+}

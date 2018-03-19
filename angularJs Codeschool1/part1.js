@@ -8,16 +8,20 @@
     var gems = [{
         name: "Dodecahedron",
         price: 2.95,
-        description: "decription...",
+        description: "description...",
         canPurchase: true,
         soldOut: false
     }, {
         name: "pentagonal gem",
         price: 5.95,
-        description: "decription...",
+        description: "description...",
         canPurchase: false,
         soldOut: false
     }]
+
+    app.controller("PanelController", function(){
+        this.tab = 1;        
+    })
 })();
 
 // directives - html annotations that trigger js behaviours
