@@ -6,6 +6,16 @@
         this.reviews = reviews;
     });
 
+    app.controller("ReviewController", function(){
+        this.review = {};
+
+        this.addReview = function(){
+            reviews.push(this.review);
+            this.review = {};
+            console.log(this.review);
+        }
+    })
+
     var reviews = [
         {
             stars:5,
