@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-       
+        <link rel="stylesheet" href="part2.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -17,21 +17,28 @@
                 {{review.body}}
                 <cite>by: {{review.author}}</cite>
             </blockquote>
-            <form name="reviwForm" ng-controller="ReviewController as reviewCtrl"
-                ng-submit="reviewCtrl.addReview()">
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                ng-submit="reviewForm.$valid && reviewCtrl.addReview()"
+                novalidate>
                 <b>Stars: {{reviewCtrl.review.stars}}</b>
                 {{reviewCtrl.review.body}}
                 <cite>by: {{reviewCtrl.review.author}}</cite>
-                <select ng-model="reviewCtrl.review.stars">
+
+                <select ng-model="reviewCtrl.review.stars" required>
                     <option value="1">*</option>
                     <option value="2">**</option>
                     <option value="3">***</option>
                     <option value="4">****</option>
                     <option value="5">*****</option>
                 </select>
-                <textarea ng-model="reviewCtrl.review.body">   </textarea>
+
+                <textarea ng-model="reviewCtrl.review.body" required>   </textarea>
+
                 <label>by:</label>
-                <input ng-model="reviewCtrl.review.author" type="email"/>
+                <input ng-model="reviewCtrl.review.author" type="email" required/>
+
+                <div> reviewForm is {{reviewForm.$valid}}</div>
+
                 <input type="submit" value="submit"/>
             </form>
             <div class="other">
