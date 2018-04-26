@@ -6,6 +6,13 @@
         this.products = gems;
     });
 
+    app.directive("productTitle", function(){
+        return{
+            restrict: 'E', // type of directive (E for element, A for attribute)
+            template: 'my custom directive {{product.name}}'
+            };
+    });
+
    
     var gems = [{
         name: "Dodecahedron",
