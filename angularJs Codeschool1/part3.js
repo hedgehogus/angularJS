@@ -9,7 +9,14 @@
     app.directive("productTitle", function(){
         return{
             restrict: 'E', // type of directive (E for element, A for attribute)
-            template: 'my custom directive {{product.name}}'
+            templateUrl: 'product-title.html',
+            controller: function(){
+                this.message = "0";
+                this.getMessage = function(){                    
+                    return this.message;
+                }
+            },
+            controllerAs: 'panels'
             };
     });
 
