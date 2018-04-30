@@ -1,24 +1,14 @@
 (function() {
     var app = angular.module("store", ['store-products']); // store depends on store-product
 
-    app.controller('StoreController', function(){       
-        this.products = gems;
-    });
-    
-
-   
-    var gems = [{
-        name: "Dodecahedron",
-        price: 2.95,
-        description: "description...",
-        canPurchase: true,
-        soldOut: false
-    }, {
-        name: "pentagonal gem",
-        price: 5.95,
-        description: "description...",
-        canPurchase: false,
-        soldOut: false
-    }]
-    
+    app.controller('StoreController', ['$http', '$log', '$filter', function($http, $log, $filter){    
+        var store = this; 
+        store.products = [];
+        $http.get('/products.json').then(function(response){
+            store.products = response.data;
+            console.log(response.data);
+        }, function (error){
+            console.log(error);
+        });        
+    }]);          
 })();
