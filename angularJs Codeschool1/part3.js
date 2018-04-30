@@ -1,24 +1,10 @@
 (function() {
-    var app = angular.module("store", []);
+    var app = angular.module("store", ['store-products']); // store depends on store-product
 
-    app.controller('StoreController', function(){
-       
+    app.controller('StoreController', function(){       
         this.products = gems;
     });
-
-    app.directive("productTitle", function(){
-        return{
-            restrict: 'E', // type of directive (E for element, A for attribute)
-            templateUrl: 'product-title.html',
-            controller: function(){
-                this.message = "0";
-                this.getMessage = function(){                    
-                    return this.message;
-                }
-            },
-            controllerAs: 'panels'
-            };
-    });
+    
 
    
     var gems = [{
