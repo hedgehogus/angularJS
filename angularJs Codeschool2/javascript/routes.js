@@ -7,7 +7,9 @@ angular.module("NoteWrangler").config(function($routeProvider){
     console.log('TEST');
     $routeProvider.when('/notes', {
         templateUrl: '/templates/pages/notes/index.html',
-        controller: function(){}
+        // controller: function(){} -i nline style controller
+        controller:'NotesIndexController',
+        controllerAs: 'indexController'
     })
     .when('/users', {
         templateUrl: '/templates/pages/users/index.html'
