@@ -3,11 +3,10 @@
     3) importing ngRoute module
     4) defining routes
 */
-angular.module("NoteWrangler").config(function($routeProvider){
-    console.log('TEST');
+angular.module("NoteWrangler").config(function($routeProvider){    
     $routeProvider.when('/notes', {
         templateUrl: '/templates/pages/notes/index.html',
-        // controller: function(){} -i nline style controller
+        // controller: function(){} -inline style controller
         controller:'NotesIndexController',
         controllerAs: 'indexController'
     })
