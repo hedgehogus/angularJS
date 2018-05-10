@@ -1,1 +1,8 @@
-<h1>notes</h1>
+<div class="note-wrapper">
+    <a class="card-notes" ng-repeat="note in indexController.notes">
+        <div class="card" title='{{note.name}}'>
+            <h2 class='h3'>{{note.name}}</h2>
+            <p>{{note.description}}</p>
+        </div>
+    </a>
+</div>
