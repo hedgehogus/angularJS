@@ -13,6 +13,7 @@ angular.module("NoteWrangler").config(function($routeProvider){
     .when('/users', {
         templateUrl: '/templates/pages/users/index.html'
     })
+    .when('/notes:id', {})
     .otherwise({redirectTo:'/'})
 }).config(['$locationProvider', function($locationProvider) {
     $locationProvider.hashPrefix('');

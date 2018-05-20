@@ -10,4 +10,11 @@
     "description": "description...2",
     "canPurchase": false,
     "soldOut": false
+},
+{
+    "name": "hedgehog gem",
+    "price": 100.01,
+    "description": "hedgehog description...2",
+    "canPurchase": false,
+    "soldOut": false
 }]
