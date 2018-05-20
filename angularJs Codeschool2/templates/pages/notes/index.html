@@ -3,7 +3,7 @@
         ng-repeat="note in indexController.notes"
         ng-href='#/notes/{{note.id}}'>
         <div class="card" title='{{note.name}}'>
-            <h2 class='h3'>{{note.name}}</h2>
+            <h2 class='h3'>{{note.name}} + {{note.id}}</h2>
             <p>{{note.description}}</p>
         </div>
     </a>
