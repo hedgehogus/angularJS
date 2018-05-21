@@ -13,6 +13,11 @@ angular.module("NoteWrangler").config(function($routeProvider){
     .when('/users', {
         templateUrl: '/templates/pages/users/index.html'
     })
+    .when('/notes/create', {
+        templateUrl: '/templates/pages/notes/create.html',
+        controller: "NotesCreateController",
+        controllerAs: "createController"
+    })
     .when('/notes/:id', {
         templateUrl:'/templates/pages/notes/show.html',
         controller: "NotesShowController",
