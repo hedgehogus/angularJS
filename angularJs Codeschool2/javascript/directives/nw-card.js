@@ -4,9 +4,10 @@ angular.module('NoteWrangler').directive("nwCard", function(){
         restrict: 'E',
         templateUrl: "templates/pages/notes/nw-card.html",
         scope: {note: '=' 
-           // note: "@" //input
+           // note: "@" //passes in a string
             // note: '=' // two way binding
-        }, // child no longer has access to the parents scope
+            // note: '&' //operator allows you to invoke or evaluate an expression on the parent scope of whatever the directive is inside of.
+        }, // child no longer has access to the parents scope - isolate scope 
         controller: function($scope){
             this.header = "note title";
             $scope.header = "from scope ";
