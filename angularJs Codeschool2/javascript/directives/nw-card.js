@@ -6,7 +6,8 @@ angular.module('NoteWrangler').directive("nwCard", function(){
         scope: {note: '=' 
            // note: "@" //passes in a string //passed directly or through interpolation with double curly braces notation
             // note: '=' // two way binding
-            // note: '&' //someExpression //operator allows you to invoke or evaluate an expression on the parent scope of whatever the directive is inside of.
+            // note: '&' //someExpression(method from otside scope) //operator allows you to invoke or evaluate an expression on the parent scope of whatever the directive is inside of.
+            // note: '<' - one way binding
         }, // child no longer has access to the parents scope - isolate scope 
         controller: function($scope){
             this.header = "note title";
