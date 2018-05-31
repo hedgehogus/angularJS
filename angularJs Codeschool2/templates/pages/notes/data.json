@@ -4,14 +4,14 @@
     "description": "description...1",
     "canPurchase": true,
     "soldOut": false,
-    "id": 111
+    "id": 1
 }, {
     "name": "pentagonal gem",
     "price": 5.95,
     "description": "description...2",
     "canPurchase": false,
     "soldOut": false,
-    "id": 233
+    "id": 2
 },
 {
     "name": "hedgehog gem",
@@ -19,5 +19,5 @@
     "description": "hedgehog description...2",
     "canPurchase": false,
     "soldOut": false,
-    "id": 333
+    "id": 3
 }]
